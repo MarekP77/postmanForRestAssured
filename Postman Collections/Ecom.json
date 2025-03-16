@@ -7,6 +7,21 @@
 	"item": [
 		{
 			"name": "Login",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "2eddb210-9c02-4b3f-853d-2b7905d96761",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);\r",
+							"postman.setEnvironmentVariable(\"token\", jsonData.token);\r",
+							"postman.setEnvironmentVariable(\"userId\", jsonData.userId);"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
 			"id": "73fc9280-9ba0-4a87-a3e3-9776094ef532",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
@@ -29,19 +44,115 @@
 		},
 		{
 			"name": "Create Product",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "e0e6d358-a12a-45ed-9152-6e0692c416d6",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);\r",
+							"postman.setEnvironmentVariable(\"productId\", jsonData.productId);"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
 			"id": "de22dd94-b0af-478d-b941-d256a4cf2883",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
 			"request": {
-				"method": "GET",
-				"header": []
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "productName",
+							"value": "qwerty",
+							"type": "text",
+							"uuid": "bf2e9501-18ea-45f0-9b8d-000f5d3320c3"
+						},
+						{
+							"key": "productAddedBy",
+							"value": "{{userId}}",
+							"type": "text",
+							"uuid": "a5223b02-0737-4f8d-924b-e1103fcd1fa3"
+						},
+						{
+							"key": "productCategory",
+							"value": "fashion",
+							"type": "text",
+							"uuid": "3fb96947-ba73-4a1c-aa9a-43c089d478d8"
+						},
+						{
+							"key": "productSubCategory",
+							"value": "shirts",
+							"type": "text",
+							"uuid": "132a7855-8060-4d7f-8fa9-d187a450cac8"
+						},
+						{
+							"key": "productPrice",
+							"value": "11500",
+							"type": "text",
+							"uuid": "42141de7-a0cc-4e8b-aa68-e640b4eae2ac"
+						},
+						{
+							"key": "productDescription",
+							"value": "Addias Originals",
+							"type": "text",
+							"uuid": "1af39000-11d8-4e13-be83-8b8bd3de676b"
+						},
+						{
+							"key": "productFor",
+							"value": "women",
+							"type": "text",
+							"uuid": "4fa0358c-0951-4868-8c18-c2099d6092f0"
+						},
+						{
+							"key": "productImage",
+							"type": "file",
+							"uuid": "865923a0-fd41-49a9-83dd-c716c6ff3c7d",
+							"src": "/C:/!Data/Udemy_Courses/Postman/images.jpg"
+						}
+					]
+				},
+				"url": "https://rahulshettyacademy.com/api/ecom/product/add-product"
 			},
 			"response": []
 		},
 		{
 			"name": "Create Order",
 			"id": "a14e4524-4018-4f46-b452-ffec3d0111c7",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"orders\": [\r\n        {\r\n            \"country\": \"Czech Republic\",\r\n            \"productOrderedId\": \"{{productId}}\"\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://rahulshettyacademy.com/api/ecom/order/create-order"
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Product",
+			"id": "dbaac8ec-f508-4a80-8ef5-04f030e5a272",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
