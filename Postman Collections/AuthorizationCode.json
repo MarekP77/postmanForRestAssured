@@ -53,7 +53,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "https://rahulshettyacademy.com/oauthapi/getCourseDetails?access_token=gN7mz5nk7SKG20QNYSha/w==",
+					"raw": "https://rahulshettyacademy.com/oauthapi/getCourseDetails?access_token=AhVZ5jU3f1XbpwtvhBkbZg==",
 					"protocol": "https",
 					"host": [
 						"rahulshettyacademy",
@@ -66,7 +66,7 @@
 					"query": [
 						{
 							"key": "access_token",
-							"value": "gN7mz5nk7SKG20QNYSha/w=="
+							"value": "AhVZ5jU3f1XbpwtvhBkbZg=="
 						}
 					]
 				}
