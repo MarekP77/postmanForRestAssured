@@ -1,0 +1,105 @@
+{
+	"info": {
+		"_postman_id": "154f2fa3-af39-4235-965f-ec164084b692",
+		"name": "Library API",
+		"schema": "https://schema.postman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Add Book",
+			"id": "405a768f-ae05-4d06-b455-f20c2dad5ab3",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"name\":\"Learn Appium Automation with Java\",\n\"isbn\":\"bcd\",\n\"aisle\":\"2926\",\n\"author\":\"John foer\"\n}"
+				},
+				"url": "https://rahulshettyacademy.com/Library/Addbook.php"
+			},
+			"response": []
+		},
+		{
+			"name": "Get Book By ID",
+			"id": "c27256ab-376a-4ea4-9d15-2aa6b6a86859",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://216.10.245.166/Library/GetBook.php?ID=ojwty9363",
+					"protocol": "http",
+					"host": [
+						"216",
+						"10",
+						"245",
+						"166"
+					],
+					"path": [
+						"Library",
+						"GetBook.php"
+					],
+					"query": [
+						{
+							"key": "ID",
+							"value": "ojwty9363"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Book By Author Name",
+			"id": "a967a45c-8acf-4e36-933b-5cc7e52f0b82",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://rahulshettyacademy.com/Library/GetBook.php?AuthorName=John foer",
+					"protocol": "https",
+					"host": [
+						"rahulshettyacademy",
+						"com"
+					],
+					"path": [
+						"Library",
+						"GetBook.php"
+					],
+					"query": [
+						{
+							"key": "AuthorName",
+							"value": "John foer"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Book",
+			"id": "5d30cd38-121f-4bf1-9729-75fcc91842ff",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"ID\": \"bcd2926\"\n}"
+				},
+				"url": "https://rahulshettyacademy.com/Library/DeleteBook.php"
+			},
+			"response": []
+		}
+	]
+}
