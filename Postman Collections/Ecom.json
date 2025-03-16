@@ -38,6 +38,18 @@
 				"header": []
 			},
 			"response": []
+		},
+		{
+			"name": "Create Order",
+			"id": "a14e4524-4018-4f46-b452-ffec3d0111c7",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
 		}
 	]
 }
