@@ -130,6 +130,20 @@
 		},
 		{
 			"name": "Create Order",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "9f4dafff-5701-4433-85e0-8a8564c10f5f",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);\r",
+							"postman.setEnvironmentVariable(\"orders\", jsonData.orders);"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
 			"id": "a14e4524-4018-4f46-b452-ffec3d0111c7",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
@@ -153,6 +167,18 @@
 					}
 				},
 				"url": "https://rahulshettyacademy.com/api/ecom/order/create-order"
+			},
+			"response": []
+		},
+		{
+			"name": "Order Details",
+			"id": "520a7901-6066-44c1-864f-dcfc710eb6fe",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": []
 			},
 			"response": []
 		},
