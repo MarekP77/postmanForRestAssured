@@ -136,7 +136,13 @@
 			},
 			"request": {
 				"method": "POST",
-				"header": [],
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{token}}",
+						"type": "text"
+					}
+				],
 				"body": {
 					"mode": "raw",
 					"raw": "{\r\n    \"orders\": [\r\n        {\r\n            \"country\": \"Czech Republic\",\r\n            \"productOrderedId\": \"{{productId}}\"\r\n        }\r\n    ]\r\n}",
@@ -157,8 +163,15 @@
 				"disableBodyPruning": true
 			},
 			"request": {
-				"method": "GET",
-				"header": []
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{token}}",
+						"type": "text"
+					}
+				],
+				"url": "https://rahulshettyacademy.com/api/ecom/product/delete-product/{{productId}}"
 			},
 			"response": []
 		}
