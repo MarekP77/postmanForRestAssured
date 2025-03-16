@@ -4,5 +4,18 @@
 		"name": "Ecom",
 		"schema": "https://schema.postman.com/json/collection/v2.0.0/collection.json"
 	},
-	"item": []
+	"item": [
+		{
+			"name": "Login",
+			"id": "73fc9280-9ba0-4a87-a3e3-9776094ef532",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
 }
