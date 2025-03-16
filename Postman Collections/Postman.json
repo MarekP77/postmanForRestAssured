@@ -1,0 +1,82 @@
+{
+	"info": {
+		"_postman_id": "ccd7ec29-2f38-47ba-ace9-7368faad90fe",
+		"name": "Learn Fork and Merge",
+		"description": "This collection template helps you get started with forking and merging in Postman.",
+		"schema": "https://schema.postman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Simple GET Request",
+			"id": "dfd6443b-a87c-4dfe-90f6-1d4150d47fca",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://postman-echo.com/get?query=param",
+					"protocol": "https",
+					"host": [
+						"postman-echo",
+						"com"
+					],
+					"path": [
+						"get"
+					],
+					"query": [
+						{
+							"key": "query",
+							"value": "param",
+							"type": "text"
+						}
+					]
+				},
+				"description": "This is a plain **GET** request."
+			},
+			"response": []
+		},
+		{
+			"name": "A POST Request",
+			"id": "8540c755-bdf9-46a9-87f4-b45d2900ac41",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "key",
+							"value": "value",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://postman-echo.com/post?query=param",
+					"protocol": "https",
+					"host": [
+						"postman-echo",
+						"com"
+					],
+					"path": [
+						"post"
+					],
+					"query": [
+						{
+							"key": "query",
+							"value": "param",
+							"type": "text"
+						}
+					]
+				},
+				"description": "This is a **POST** request."
+			},
+			"response": []
+		}
+	]
+}
