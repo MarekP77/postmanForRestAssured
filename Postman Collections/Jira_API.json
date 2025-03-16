@@ -1,0 +1,76 @@
+{
+	"info": {
+		"_postman_id": "84e58d1a-b2ed-4bbd-a3c3-04d6f55d082b",
+		"name": "Jira API",
+		"schema": "https://schema.postman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create Bug",
+			"id": "d82b6834-6d93-41e0-9500-2c4bad9c26a3",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Basic bWFydGFucG9zcGFAb3V0bG9vay5jb206QVRBVFQzeEZmR0YwRW0ycUFmNjhreUlCTUt2OTc1ODdzcXNIcHV1YmJKNFNacVZza2JZM1pSMUQwaDdQNVViVzIzYnJfYWh2VVdNbExySGZPczdOTkg3TE9XX2MtT2xkaVU0VUdJb2t0SVFBajI5YTU0dWFLSVBpcXNmODhyVVRXVEdxdHFuMXBZMG1ZTzZib2xaOW5MdkxNUy1PSTJteEVMSmZTREZlUnlWS29DY3NBamIwRGU4PTc5MDE0Qzkw",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"fields\": {\r\n        \"project\": {\r\n            \"key\": \"SCRUM\"\r\n        },\r\n        \"issuetype\": {\r\n            \"name\": \"Bug\"\r\n        },\r\n        \"summary\": \"Dropdowns not working\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://marekpospisil.atlassian.net/rest/api/3/issue"
+			},
+			"response": []
+		},
+		{
+			"name": "Add Attachment",
+			"id": "0b9d0b59-cbae-4208-a73c-b23d58259666",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic bWFydGFucG9zcGFAb3V0bG9vay5jb206QVRBVFQzeEZmR0YwRW0ycUFmNjhreUlCTUt2OTc1ODdzcXNIcHV1YmJKNFNacVZza2JZM1pSMUQwaDdQNVViVzIzYnJfYWh2VVdNbExySGZPczdOTkg3TE9XX2MtT2xkaVU0VUdJb2t0SVFBajI5YTU0dWFLSVBpcXNmODhyVVRXVEdxdHFuMXBZMG1ZTzZib2xaOW5MdkxNUy1PSTJteEVMSmZTREZlUnlWS29DY3NBamIwRGU4PTc5MDE0Qzkw",
+						"type": "text"
+					},
+					{
+						"key": "X-Atlassian-Token",
+						"value": "no-check",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/C:/!Data/Udemy_Courses/JavaREST_Assured/Snapshot.png"
+						}
+					]
+				},
+				"url": "https://marekpospisil.atlassian.net/rest/api/3/issue/10015/attachments"
+			},
+			"response": []
+		}
+	]
+}
