@@ -171,14 +171,40 @@
 			"response": []
 		},
 		{
-			"name": "Order Details",
+			"name": "View Order Details",
 			"id": "520a7901-6066-44c1-864f-dcfc710eb6fe",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
 			"request": {
 				"method": "GET",
-				"header": []
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{token}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://rahulshettyacademy.com/api/ecom/order/get-orders-details?id={{orders}}",
+					"protocol": "https",
+					"host": [
+						"rahulshettyacademy",
+						"com"
+					],
+					"path": [
+						"api",
+						"ecom",
+						"order",
+						"get-orders-details"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "{{orders}}"
+						}
+					]
+				}
 			},
 			"response": []
 		},
