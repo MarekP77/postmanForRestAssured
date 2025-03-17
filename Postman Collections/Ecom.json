@@ -226,6 +226,25 @@
 				"url": "https://rahulshettyacademy.com/api/ecom/product/delete-product/{{productId}}"
 			},
 			"response": []
+		},
+		{
+			"name": "Delete Product Copy",
+			"id": "da4cec79-e64d-4c5f-bfec-44031498a5ad",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{token}}",
+						"type": "text"
+					}
+				],
+				"url": "https://rahulshettyacademy.com/api/ecom/product/delete-product/{{productId}}"
+			},
+			"response": []
 		}
 	]
 }
